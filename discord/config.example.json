@@ -1,0 +1,9 @@
+{
+  "webhook_id": "",
+  "webhook_token": "",
+  "web3_provider": "",
+  "orderbook_url": "",
+  "exchange_address": "",
+  "explorer_address_prefix": "",
+  "explorer_tx_prefix": ""
+}

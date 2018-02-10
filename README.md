@@ -1,6 +1,6 @@
 ![Project Wyvern Logo](https://media.githubusercontent.com/media/ProjectWyvern/wyvern-branding/master/logo/logo-square-red-transparent-200x200.png?raw=true "Project Wyvern Logo")
 
-## Wyvern Exchange Integrations
+## Wyvern Protocol Integrations
 
 [![https://badges.frapsoft.com/os/mit/mit.svg?v=102](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://opensource.org/licenses/MIT)
 
@@ -8,7 +8,7 @@
 
 Various external integrations connecting to the on-chain Wyvern Protocol:
 
-  - [Discord](discord): Discord bot which automatically posts settled orders
+  - [Discord](discord): Discord webhook integration which automatically posts new, cancelled, and settled orders
 
 ### Contributing
 
