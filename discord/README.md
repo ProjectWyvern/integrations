@@ -19,3 +19,9 @@ Copy [config.example.json](config.example.json) to `config.json` and edit to you
 ```bash
 node index.js
 ```
+
+Or, for automatic restart after a 1s delay, run:
+
+```bash
+./run.sh
+```

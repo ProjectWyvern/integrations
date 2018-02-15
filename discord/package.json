@@ -2,6 +2,9 @@
   "dependencies": {
     "axios": "^0.17.1",
     "discord.js": "^11.3.0",
-    "web3": "^1.0.0-beta.29"
+    "web3": "^1.0.0-beta.29",
+    "wyvern-exchange": "0.1.1",
+    "wyvern-js": "^0.1.0",
+    "wyvern-schemas": "^0.1.1"
   }
 }
