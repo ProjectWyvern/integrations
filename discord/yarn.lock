@@ -439,7 +439,7 @@ bluebird@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
-bn.js@4.11.6:
+bn.js@4.11.6, bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.11.6, bn.js@^4.4.0:
   version "4.11.6"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.6.tgz#53344adb14617a13f6e8dd2ce28905d1c0ba3215"
 
@@ -447,7 +447,7 @@ bn.js@4.11.7:
   version "4.11.7"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.7.tgz#ddb048e50d9482790094c13eb3fcfc833ce7ab46"
 
-bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.10.0, bn.js@^4.11.0, bn.js@^4.11.3, bn.js@^4.11.6, bn.js@^4.11.7, bn.js@^4.11.8, bn.js@^4.4.0, bn.js@^4.8.0:
+bn.js@^4.10.0, bn.js@^4.11.0, bn.js@^4.11.3, bn.js@^4.11.7, bn.js@^4.11.8, bn.js@^4.8.0:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
 
@@ -2159,7 +2159,7 @@ js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.7.0:
+js-yaml@^3.10.0, js-yaml@^3.7.0:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
@@ -2938,7 +2938,7 @@ querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
 
-querystring@0.2.0:
+querystring@0.2.0, querystring@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
@@ -4233,17 +4233,18 @@ ws@^4.0.0:
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
 
-wyvern-exchange@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/wyvern-exchange/-/wyvern-exchange-0.1.1.tgz#fcd0b9c3af0ca513e488498a1cc035848e999c35"
+wyvern-exchange@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/wyvern-exchange/-/wyvern-exchange-0.1.4.tgz#7427de68a116a1426ea6a40ec2afd97e43209eed"
   dependencies:
     axios "^0.17.1"
     bignumber.js "^6.0.0"
-    wyvern-js "0.1.0"
+    querystring "^0.2.0"
+    wyvern-js "0.1.1"
 
-wyvern-js@0.1.0, wyvern-js@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/wyvern-js/-/wyvern-js-0.1.0.tgz#7a8e933fe7c4c2fe508b5068cba6aef2e8924105"
+wyvern-js@0.1.1, wyvern-js@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/wyvern-js/-/wyvern-js-0.1.1.tgz#0ea04e7ba6d573ee3a227b2a6cd77e4776ebecaa"
   dependencies:
     "0x.js" "^0.29.2"
     "@0xproject/abi-gen" "^0.1.1"
@@ -4269,9 +4270,12 @@ wyvern-js@0.1.0, wyvern-js@^0.1.0:
     web3 "^0.20.4"
     webpack "^3.10.0"
 
-wyvern-schemas@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/wyvern-schemas/-/wyvern-schemas-0.1.1.tgz#b22b560dc4415a0a0746f015593bf3dce8a3442b"
+wyvern-schemas@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/wyvern-schemas/-/wyvern-schemas-0.1.6.tgz#8912d7f9c87540270e4992444fbc0a5b3a832a92"
+  dependencies:
+    axios "^0.17.1"
+    js-yaml "^3.10.0"
 
 xhr-request-promise@^0.1.2:
   version "0.1.2"
