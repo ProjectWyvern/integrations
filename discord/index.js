@@ -76,7 +76,7 @@ var lastBlockNumber
 var hashes = []
 const poll = async () => {
   const blockNumber = await promisify(web3.eth.getBlockNumber)
-  const orders = await wyvernExchange.orders({limit: 500})
+  const orders = await wyvernExchange.orders({limit: 100})
   await Promise.all(orders.map(async order => {
     if (first && hashes.indexOf(order.hash) === -1) {
       return hookOnPost(order)
