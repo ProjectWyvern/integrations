@@ -43,7 +43,9 @@ const hookOnMatch = async (event) => {
   const taker = event.returnValues.taker.toLowerCase()
   const token = tokens.filter(t => t.address.toLowerCase() === order.paymentToken.toLowerCase())[0]
   const amount = WyvernProtocol.toUnitAmount(new BigNumber(order.basePrice), token.decimals)
-  hook.send(`**MATCH** - [${order.asset.formatted.title}](${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}) sold by [${maker}](${config.explorer_account_prefix + maker}) to [${taker}](${config.explorer_account_prefix + taker})\
+  const which = order.side === 0 ? 'purchased' : 'sold'
+  const connective = order.side === 0 ? 'from' : 'to'
+  hook.send(`**MATCH** - [${order.asset.formatted.title}](${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}) ${which} by [${maker}](${config.explorer_account_prefix + maker}) ${connective} [${taker}](${config.explorer_account_prefix + taker})\
   for ${amount} ${token.symbol} - [Order](${'https://exchange.projectwyvern.com/orders/' + order.hash}) - [TX](${config.explorer_tx_prefix + event.transactionHash})`)
 }
 
