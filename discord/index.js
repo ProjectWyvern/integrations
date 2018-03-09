@@ -45,8 +45,8 @@ const hookOnMatch = async (event) => {
   const amount = WyvernProtocol.toUnitAmount(new BigNumber(order.basePrice), token.decimals)
   const which = order.side === 0 ? 'purchased' : 'sold'
   const connective = order.side === 0 ? 'from' : 'to'
-  hook.send(`**MATCH** - [${order.asset.formatted.title}](${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}) ${which} by [${maker}](${config.explorer_account_prefix + maker}) ${connective} [${taker}](${config.explorer_account_prefix + taker})\
-  for ${amount} ${token.symbol} - [Order](${'https://exchange.projectwyvern.com/orders/' + order.hash}) - [TX](${config.explorer_tx_prefix + event.transactionHash})`)
+  hook.send(`**MATCH** - [${order.asset.formatted.title}](<${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}>) ${which} by [${maker}](<${config.explorer_account_prefix + maker}>) ${connective} [${taker}](<${config.explorer_account_prefix + taker}>)\
+  for ${amount} ${token.symbol} - [Order](<${'https://exchange.projectwyvern.com/orders/' + order.hash}>) - [TX](<${config.explorer_tx_prefix + event.transactionHash}>)`)
 }
 
 const hookOnPost = async (order) => {
@@ -54,7 +54,7 @@ const hookOnPost = async (order) => {
   const token = tokens.filter(t => t.address.toLowerCase() === order.paymentToken.toLowerCase())[0]
   const amount = WyvernProtocol.toUnitAmount(new BigNumber(order.basePrice), token.decimals)
   const which = order.side === 0 ? 'purchase' : 'sale'
-  hook.send(`**POST** - [${order.asset.formatted.title}](${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}) for ${which} by [${maker}](${config.explorer_account_prefix + maker}) for ${amount} ${token.symbol} - [Order](${'https://exchange.projectwyvern.com/orders/' + order.hash})`)
+  hook.send(`**POST** - [${order.asset.formatted.title}](<${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}>) for ${which} by [${maker}](<${config.explorer_account_prefix + maker}>) for ${amount} ${token.symbol} - [Order](<${'https://exchange.projectwyvern.com/orders/' + order.hash}>)`)
 }
 
 const hookOnCancel = async (event) => {
@@ -63,7 +63,7 @@ const hookOnCancel = async (event) => {
   const token = tokens.filter(t => t.address.toLowerCase() === order.paymentToken.toLowerCase())[0]
   const amount = WyvernProtocol.toUnitAmount(new BigNumber(order.basePrice), token.decimals)
   const which = order.side === 0 ? 'Purchase' : 'Sale'
-  hook.send(`**CANCEL** - ${which} of [${order.asset.formatted.title}](${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}) for ${amount} ${token.symbol} cancelled by [${maker}](${config.explorer_account_prefix + maker}) - [Order](${'https://exchange.projectwyvern.com/orders/' + order.hash})`)
+  hook.send(`**CANCEL** - ${which} of [${order.asset.formatted.title}](<${'https://exchange.projectwyvern.com/assets/' + order.asset.hash}>) for ${amount} ${token.symbol} cancelled by [${maker}](<${config.explorer_account_prefix + maker}>) - [Order](<${'https://exchange.projectwyvern.com/orders/' + order.hash}>)`)
 }
 
 const handleEvents = async (block) => {

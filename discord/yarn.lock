@@ -298,7 +298,7 @@ async-eventemitter@^0.2.2:
   dependencies:
     async "^2.4.0"
 
-"async-eventemitter@github:ahultgren/async-eventemitter#fa06e39e56786ba541c180061dbf2c0a5bbf951c":
+async-eventemitter@ahultgren/async-eventemitter#fa06e39e56786ba541c180061dbf2c0a5bbf951c:
   version "0.2.3"
   resolved "https://codeload.github.com/ahultgren/async-eventemitter/tar.gz/fa06e39e56786ba541c180061dbf2c0a5bbf951c"
   dependencies:
@@ -5407,9 +5407,9 @@ wyvern-js@0.1.1, wyvern-js@^0.1.1:
     web3 "^0.20.4"
     webpack "^3.10.0"
 
-wyvern-schemas@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/wyvern-schemas/-/wyvern-schemas-0.5.3.tgz#d5e84f12f067a71e901873d95caf0ec19293772b"
+wyvern-schemas@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/wyvern-schemas/-/wyvern-schemas-0.5.4.tgz#91a9da46a2df7a0aea8bf01bdd84116d84953e73"
   dependencies:
     "@0xproject/utils" "^0.3.4"
     axios "^0.17.1"
